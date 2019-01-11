@@ -4,14 +4,14 @@ type (
 
 	PPPFrameHeader struct {
 		Flag int8		// frame start flag
-		A int8			// meaningless
+		A int8		// meaningless
 		C int8			// meaningless
 		P int16			// protocol
 	}
 
 	PPPFrameTail struct {
-		FCS int16	   // fcs
-		Flag int8	   // frame end flag
+		Fcs  int16 // fcs
+		Flag int8  // frame end flag
 	}
 
 	PPPFrame struct {
@@ -20,6 +20,20 @@ type (
 		Tail   PPPFrameTail
 	}
 
+
+	EthernetFrameHeader struct {
+		
+	}
+
+	EthernetFrameTail struct {
+
+	}
+
+	EthernetFrame struct {
+		Header EthernetFrameHeader
+		Data   []byte
+		Tail   EthernetFrameTail
+	}
 )
 
 
