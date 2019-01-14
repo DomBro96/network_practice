@@ -22,10 +22,10 @@ type (
 
 
 	EthernetFrameHeader struct {
-		Preamble   int64		// 7 bytes preamble 1010....1010, 1 byte start delimiter	10101011
-		DesAddress string		// 6 bytes des address
-		SrcAddress string		// 6 bytes src address
-		Type 	int16			// protocol type
+		Preamble   int64  // 7 bytes preamble 1010....1010, 1 byte start delimiter	10101011
+		DstAddress string // 6 bytes dst address
+		SrcAddress string // 6 bytes src address
+		Type       int16  // protocol type
 	}
 
 	EthernetFrameTail struct {
